@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using PharmacistsSyndicateReNew.Models.Domain.Identity;
+using PharmacistsSyndicateReNew.Models.Local;
+
+namespace PharmacistsSyndicateReNew.implementation.EntityConfigurations
+{
+    public class SQLDbContext : IdentityDbContext<ApplicationUser>
+    {
+        public SQLDbContext(DbContextOptions<SQLDbContext> options)
+                  : base(options)
+        {
+            this.Database.EnsureCreated();
+        }
+
+        public DbSet<Departments> Departments { get; set; }
+    }
+}

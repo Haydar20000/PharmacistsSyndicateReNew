@@ -1,0 +1,14 @@
+﻿@inject SignInManager<ApplicationUser> signInManager;
+@inject UserManager<ApplicationUser> userManager;
+
+@{
+    ViewData["Title"] = "الصفحة الرئيسية";
+}
+
+<main>
+    <div class="wrapper">
+        <h1>Haydar Al-Samawe</h1>
+        <a class="btn-style01" style="width:150px;padding:14px;text-align:center"
+            href="~/SyndicateManagement/Create">@DkStrings.CreateMembershipTitle</a>
+    </div>
+</main>

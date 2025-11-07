@@ -1,0 +1,110 @@
+@model MembershipManagementVM
+@* @{
+    ViewBag.Title = DkStrings.CreateMembershipTitle;
+} *@
+<div class="input-main">
+    <h1 class="main-Title">@DkStrings.CreateMembershipTitle</h1>
+    <form method="post" enctype="multipart/form-data">
+        <div asp-validation-summary="All" class="validation-summary"></div>
+        <input type="hidden" asp-for="MembershipId" />
+        <h3>@DkStrings.CreateMembershipNameInArabic</h3>
+        <div class="input-section">
+            <div class="input-field">
+                <label class="input-field-label" asp-for="FNameArabic"></label>
+                <input class="input-field-input" asp-for="FNameArabic" />
+            </div>
+            <div class="input-field">
+                <label class="input-field-label" asp-for="SNameArabic"></label>
+                <input class="input-field-input" asp-for="SNameArabic" />
+            </div>
+            <div class="input-field">
+                <label class="input-field-label" asp-for="ThNameArabic"></label>
+                <input class="input-field-input" asp-for="ThNameArabic" />
+            </div>
+            <div class="input-field">
+                <label class="input-field-label" asp-for="SurNameArabic"></label>
+                <input class="input-field-input" asp-for="SurNameArabic" />
+            </div>
+            <div class="input-field">
+                <label class="input-field-label" asp-for="MotherNameArabic"></label>
+                <input class="input-field-input" style="width:180px" asp-for="MotherNameArabic" />
+            </div>
+        </div>
+        <h3>@DkStrings.CreateMembershipNameInEnglish</h3>
+        <h3>@DkStrings.CreateMembershipNameInEnglishNote</h3>
+        <div class="input-section" style="direction:ltr">
+            <div class="input-field">
+                <label class="input-field-label" asp-for="FNameEnglish"></label>
+                <input class="input-field-input" asp-for="FNameEnglish" />
+            </div>
+            <div class="input-field">
+                <label class="input-field-label" asp-for="SNameEnglish"></label>
+                <input class="input-field-input" asp-for="SNameEnglish" />
+            </div>
+            <div class="input-field">
+                <label class="input-field-label" asp-for="ThNameEnglish"></label>
+                <input class="input-field-input" asp-for="ThNameEnglish" />
+            </div>
+            <div class="input-field">
+                <label class="input-field-label" asp-for="SurNameEnglish"></label>
+                <input class="input-field-input" asp-for="SurNameEnglish" />
+            </div>
+            <div class="input-field">
+                <label class="input-field-label" asp-for="MotherNameEnglish"></label>
+                <input class="input-field-input" style="width:180px" asp-for="MotherNameEnglish" />
+            </div>
+        </div>
+        <h3>@DkStrings.CreateMembershipContactDetails</h3>
+        <div class="input-section">
+            <div class="input-field">
+                <label class="input-field-label" asp-for="PhoneNumber"></label>
+                <input class="input-field-input" asp-for="PhoneNumber" />
+            </div>
+            <div class="input-field">
+                <label class="input-field-label" asp-for="Email"></label>
+                <input class="input-field-input" disabled style="width:300px;pointer-events:none" asp-for="Email" />
+            </div>
+        </div>
+        <h3>@DkStrings.CreateMembershipAddress</h3>
+        <div class="input-section">
+            <div class="input-field">
+                <label class="input-field-label" asp-for="Governorate"></label>
+                <input class="input-field-input" asp-for="Governorate" />
+            </div>
+            <div class="input-field">
+                <label class="input-field-label" asp-for="City"></label>
+                <input class="input-field-input" asp-for="City" />
+            </div>
+            <div class="input-field">
+                <label class="input-field-label" asp-for="Neighborhood"></label>
+                <input class="input-field-input" asp-for="Neighborhood" />
+            </div>
+            <div class="input-field">
+                <label class="input-field-label" asp-for="Street"></label>
+                <input class="input-field-input" asp-for="Street" />
+            </div>
+            <div class="input-field">
+                <label class="input-field-label" asp-for="Home"></label>
+                <input class="input-field-input" asp-for="Home" />
+            </div>
+        </div>
+        <div class="input-section">
+            <div class="input-field">
+                <div class="form-group">
+                    <label class=".checkbox-label" asp-for="IsEmployee"></label>
+                    <div class="checkbox-wrapper-39" style="margin-right:40px;margin-top:10px">
+                        <label>
+                            <input type="checkbox" asp-for="IsEmployee" />
+                            <span class="checkbox"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-center" style="margin-top : 20px;">
+            <button class="btn-style01" style="width:100px" type="submit">@DkStrings.Save</button>
+            <a class="btn-style01" style="width:72px;padding:14px;text-align:center"
+                href="~/SyndicateManagement/Intro/@Model.MembershipId">@DkStrings.Back</a>
+        </div>
+    </form>
+</div>
