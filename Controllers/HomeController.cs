@@ -1,5 +1,7 @@
+// This Code Belong For Diamond Key Software solutions
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using PharmacistsSyndicateReNew.Core.UnitOfWork;
 using PharmacistsSyndicateReNew.Models;
 
 namespace PharmacistsSyndicateReNew.Controllers;
@@ -7,10 +9,12 @@ namespace PharmacistsSyndicateReNew.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private IUnitOfWork _unitOfWork;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(IUnitOfWork unitOfWork, ILogger<HomeController> logger)
     {
         _logger = logger;
+        _unitOfWork = unitOfWork;
     }
 
     public IActionResult Index()

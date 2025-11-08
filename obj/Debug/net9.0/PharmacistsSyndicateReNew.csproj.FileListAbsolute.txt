@@ -240,4 +240,5 @@ d:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\bin\Debug
 d:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug\net9.0\PharmacistsSyndicateReNew.csproj.AssemblyReference.cache
 d:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug\net9.0\compressed\1m4g6ghnwr-3v1k1ahv57.gz
 d:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug\net9.0\Pharmaci.908A04EE.Up2Date
-d:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug\net9.0\compressed\1bsm4hhkyy-quhpzah1ol.gz
+d:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug\net9.0\PharmacistsSyndicateReNew.sourcelink.json
+d:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug\net9.0\compressed\1bsm4hhkyy-2zycxez0z4.gz

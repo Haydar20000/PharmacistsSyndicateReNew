@@ -1,254 +1,320 @@
-@font-face {
-    font-family: Cairo;
-    src: url('../Fonts/Cairo-Regular.ttf') format('truetype');
-}
+ /* This Code Belong For Diamond Key Software solutions */
+ @font-face {
+     font-family: Cairo;
+     src: url('../Fonts/Cairo-Regular.ttf') format('truetype');
+ }
 
-:root {
-    --primary: #c3dcca;
-    --secondary: #dbeadf;
-    --dark: #1b251e;
-    --light: #c3dcca;
-    --red: rgb(255, 99, 71);
-    --shadow: 0px 1px 5px rgba(104, 104, 104, 0.8);
-    --buttonShadow: 1.5px 1.5px 3px -2px rgba(0, 0, 0, 0.66);
-    /* --primary: #ddd;
+ :root {
+     --primary: #c3dcca;
+     --secondary: #dbeadf;
+     --dark: #1b251e;
+     --light: #c3dcca;
+     --red: rgb(255, 99, 71);
+     --shadow: 0px 1px 5px rgba(104, 104, 104, 0.8);
+     --buttonShadow: 1.5px 1.5px 3px -2px rgba(0, 0, 0, 0.66);
+     /* --primary: #ddd;
     --secondary: #ccc;
     --dark: #333;
     --light: #fff;*/
-}
+ }
 
-/* Buttons Style ------------------------------ Start */
-.btn-style01 {
-    background: var(--primary);
-    display: inline-block;
-    padding: 0.6rem;
-    color: var(--dark);
-    text-decoration: none;
-    border: var(--secondary) solid .1px;
-    box-shadow: var(--buttonShadow);
-    font-family: Cairo;
-    font-size: 1.1rem;
-    text-align: center
-}
+ /* Buttons Style ------------------------------ Start */
+ .btn-style01 {
+     background: var(--primary);
+     display: inline-block;
+     padding: 0.6rem;
+     color: var(--dark);
+     text-decoration: none;
+     border: var(--secondary) solid .1px;
+     box-shadow: var(--buttonShadow);
+     font-family: Cairo;
+     font-size: 1.1rem;
+     text-align: center
+ }
 
-.btn-style01:hover {
-    background: var(--secondary);
-}
+ .btn-style01:hover {
+     background: var(--secondary);
+ }
 
-.btn-circler {
-    background: var(--primary);
-    color: var(--dark);
-    text-decoration: none;
-    border: var(--secondary) solid .1px;
-    border-radius: 50%;
-    width: 4rem;
-    height: 3rem;
-    box-shadow: var(--buttonShadow);
-    font-size: 1rem;
+ .btn-circler {
+     background: var(--primary);
+     color: var(--dark);
+     text-decoration: none;
+     border: var(--secondary) solid .1px;
+     border-radius: 50%;
+     width: 4rem;
+     height: 3rem;
+     box-shadow: var(--buttonShadow);
+     font-size: 1rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .btn-circler:hover {
+     background: var(--secondary);
+ }
+
+ /* Buttons Page Style ------------------------------ End */
+
+ /* _Layout Page Style ------------------------------ Start */
+ html {
+     box-sizing: border-box;
+     color: var(--dark);
+ }
+
+ body {
+     background: var(--secondary);
+     margin: 0 30px 10px 30px;
+     line-height: 1.4;
+     font-family: Cairo;
+ }
+
+ .title-container {
+     height: 140px;
+     background: var(--primary);
+     margin: 20px 0 10px 0;
+     box-shadow: var(--shadow);
+     display: grid;
+     grid-template-columns: 1fr 8fr 1fr;
+ }
+
+ .logo-section {
+     grid-column: 1;
+     margin: auto;
+ }
+
+ .logo {
+     height: 100px;
+     width: 100px;
+ }
+
+ .title-section {
+     display: flex;
+     grid-column: 2;
+     justify-content: space-around;
+
+ }
+
+ .text-ar {
+     color: var(--dark);
+     font-size: 2rem;
+     font-weight: 500;
+     margin: auto;
+     text-decoration: none;
+ }
+
+ .empty-section {
+     grid-column: 3;
+ }
+
+ footer {
+     margin-top: 1rem;
+     background: var(--dark);
+     color: var(--light);
+     text-align: center;
+     box-shadow: var(--shadow);
+     padding: 1rem;
+ }
+
+ .footer-text {
+     text-decoration: none;
+     font-weight: bold;
+     text-align: center;
+     justify-content: center;
+     color: white;
+     font-size: 1.2rem;
+ }
+
+ /* _Layout Page Style ------------------------------ End */
+
+ /* Index Page Style ------------------------------ Start */
+ .form-group {
+     display: grid;
+     grid-template-columns: 250px 300px 250px;
+ }
+
+ .form-group-big {
+     display: grid;
+     grid-template-columns: 380px 400px 200px;
+     margin: auto;
+ }
+
+ .wrapper {
+     display: grid;
+     grid-gap: 20px;
+ }
+
+ .input-field-label-main {
+     margin-left: auto;
+     padding: 0.6rem;
+     background: var(--dark);
+     color: var(--light);
+     height: 20px;
+     font-size: 1.1rem;
+     margin-top: 10px;
+     margin-left: 10px;
+ }
+
+ .input-field-input-main {
+     margin-left: auto;
+     background: var(--primary);
+     font-family: Cairo;
+     padding: 0.6rem;
+     color: var(--dark);
+     font-size: 1.1rem;
+     font-weight: bold;
+     direction: rtl;
+     height: 20px;
+     border: 1px solid var(--primary);
+     margin-top: 10px;
+     margin-left: 10px;
+ }
+
+ /* Index Page Style ------------------------------ End */
+
+ /* SyndicateManagement \ Create Page Style ------------------------------ Start */
+ /* .input-main {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.btn-circler:hover {
-    background: var(--secondary);
-}
-
-/* Buttons Page Style ------------------------------ End */
-
-/* _Layout Page Style ------------------------------ Start */
-html {
-    box-sizing: border-box;
-    color: var(--dark);
-}
-
-body {
-    background: var(--secondary);
-    margin: 0 30px 10px 30px;
-    line-height: 1.4;
-    font-family: Cairo;
-}
-
-.title-container {
-    height: 140px;
-    background: var(--primary);
-    margin: 20px 0 10px 0;
-    box-shadow: var(--shadow);
-    display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
-}
-
-.logo-section {
-    grid-column: 1;
-    margin: auto;
-}
-
-.logo {
-    height: 100px;
-    width: 100px;
-}
-
-.title-section {
-    display: flex;
-    grid-column: 2;
-    justify-content: space-around;
-
-}
-
-.text-ar {
-    color: var(--dark);
-    font-size: 2rem;
-    font-weight: 500;
-    margin: auto;
-    text-decoration: none;
-}
-
-.empty-section {
-    grid-column: 3;
-}
-
-footer {
-    margin-top: 1rem;
-    background: var(--dark);
-    color: var(--light);
-    text-align: center;
-    box-shadow: var(--shadow);
-    padding: 1rem;
-}
-
-.footer-text {
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.2rem;
-}
-
-/* _Layout Page Style ------------------------------ End */
-
-/* Index Page Style ------------------------------ Start */
-.wrapper {
-    display: grid;
-    grid-gap: 20px;
-}
-
-/* Index Page Style ------------------------------ End */
-
-/* SyndicateManagement \ Create Page Style ------------------------------ Start */
-.input-main {
+    flex-direction: column;
     justify-content: center;
     width: 100%;
-}
+} */
 
-.input-main h3 {
-    margin: auto;
-    text-align: center;
-}
+ .input-main h3 {
+     margin: auto;
+     text-align: center;
+ }
 
-.main-Title {
-    padding: 10px;
-    text-align: center;
-    margin: 20px auto;
-}
+ .main-Title {
+     padding: 10px;
+     text-align: center;
+     margin: 20px auto;
+ }
 
-.validation-summary {
-    margin-left: auto;
-    color: red;
-    font-size: 1.1rem;
-    direction: rtl;
-    margin: 25px;
-}
+ .validation-summary {
+     margin-left: auto;
+     color: red;
+     font-size: 1.1rem;
+     direction: rtl;
+     margin: 25px;
+ }
 
-.input-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    border: 1px solid var(--primary);
-    padding: 10px;
-    width: 95%;
-    margin: 5px auto;
-    overflow: hidden;
-    align-items: center;
-    text-align: center
-}
+ .input-section {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     border: 1px solid var(--primary);
+     padding: 10px;
+     width: 95%;
+     margin: 5px auto;
+     overflow: hidden;
+     align-items: center;
+     text-align: center
+ }
 
-.input-field {
-    margin: 5px;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    text-align: center
-}
+ .input-field {
+     margin: 5px;
+     display: inline-block;
+     justify-content: center;
+     align-items: center;
+     text-align: center
+ }
 
-.input-field-label {
-    min-width: 160px;
-    margin-left: auto;
-    padding: 0 8px;
-    background: var(--dark);
-    color: var(--light);
-    font-size: 1.1rem;
-    margin-top: 11px;
-    margin-left: 5px;
-}
+ .input-field-label {
+     min-width: 160px;
+     margin-left: auto;
+     padding: 0 8px;
+     background: var(--dark);
+     color: var(--light);
+     font-size: 1.1rem;
+     margin-top: 11px;
+     margin-left: 5px;
+ }
 
-.input-field-input {
-    width: 150px;
-    padding: 0 8px;
-    margin-left: auto;
-    background: var(--primary);
-    color: var(--dark);
-    font-size: 1.1rem;
-    direction: rtl;
-    height: 30px;
-    border: 1px solid #000;
-    margin-top: 10px;
-}
+ .input-field-input {
+     width: 150px;
+     padding: 0 8px;
+     margin-left: auto;
+     background: var(--primary);
+     color: var(--dark);
+     font-size: 1.1rem;
+     direction: rtl;
+     height: 30px;
+     border: 1px solid #000;
+     margin-top: 10px;
+ }
 
-.checkbox-label {
-    margin-left: auto;
-    padding: 0.6rem;
-    background: var(--dark);
-    color: var(--light);
-    width: 200px;
-    height: 20px;
-    font-size: 1.1rem;
-    margin-top: 10px;
-    margin-left: 10px;
-}
+ .checkbox-label {
+     margin-left: auto;
+     padding: 0.6rem;
+     background: var(--dark);
+     color: var(--light);
+     width: 200px;
+     height: 20px;
+     font-size: 1.1rem;
+     margin-top: 10px;
+     margin-left: 10px;
+ }
 
-/*--this is for checkbox style-- Start*/
+ /*--this is for checkbox style-- Start*/
 
-.checkbox-wrapper-39 label {
-    display: block;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
+ .checkbox-wrapper-39 label {
+     display: block;
+     width: 30px;
+     height: 30px;
+     cursor: pointer;
+ }
 
-.checkbox-wrapper-39 input {
-    visibility: hidden;
-    display: none;
-}
+ .checkbox-wrapper-39 input {
+     visibility: hidden;
+     display: none;
+ }
 
-.checkbox-wrapper-39 input:checked~.checkbox {
-    transform: rotate(45deg);
-    width: 14px;
-    margin-left: 12px;
-    border-color: var(--dark);
-    border-top-color: transparent;
-    border-left-color: transparent;
-    border-radius: 0;
-}
+ .checkbox-wrapper-39 input:checked~.checkbox {
+     transform: rotate(45deg);
+     width: 14px;
+     margin-left: 12px;
+     border-color: var(--dark);
+     border-top-color: transparent;
+     border-left-color: transparent;
+     border-radius: 0;
+ }
 
-.checkbox-wrapper-39 .checkbox {
-    display: block;
-    width: inherit;
-    height: inherit;
-    border: 3px solid var(--dark);
-    border-radius: 6px;
-    transition: all 0.375s;
-}
+ .checkbox-wrapper-39 .checkbox {
+     display: block;
+     width: inherit;
+     height: inherit;
+     border: 3px solid var(--dark);
+     border-radius: 6px;
+     transition: all 0.375s;
+ }
 
-/*--this is for checkbox style--End */
-/* SyndicateManagement \ Create Page Style ------------------------------ End */
+ /*--this is for checkbox style--End */
+
+ /* SyndicateManagement \ Create Page Style ------------------------------ End */
+
+ /*Media Queries*/
+ @media(max-width: 700px) {
+     .form-group {
+         grid-template-columns: 80vw;
+     }
+
+     .form-group-big {
+         grid-template-columns: 80vw;
+     }
+
+     .input-main {
+         /* min-height: 100vh; */
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         padding: 16px;
+     }
+
+     .input-field-label-main {
+         text-align: center;
+         font-size: .9rem;
+     }
+ }

@@ -1,3 +1,4 @@
+// This Code Belong For Diamond Key Software solutions
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,10 +35,16 @@ namespace PharmacistsSyndicateReNew.Constants
         public const String ReSendConfirmOtp = "اعادة ارسال رمز التفعيل";
         public const String EmailSubject = "تفعيل الاشتراك";
         public const String Save = "حغظ";
-
+        // Error Strings
+        public const String Error01 = "حدث خطأ ما فى النظام يرجى المحاولة لاحقا";
         // Project Strings
         public const String CompanyName = "نقابة الصيادلة العراقيين";
         public const String CompanyNameEn = "Iraqi Chemists Syndicate";
+        // Index page strings
+        public const String IndexTitle = "الصفحة الرئيسية";
+        public const String IndexWelcome = "مرحبا بكم في نقابة الصيادلة العراقيين";
+        public const String IndexMainComment01 = "للدخول الى استمارة التجديد";
+        public const String IndexMainComment02 = "يرجى ادخال البيانات التالية رجاءا";
 
         // Create Membership Page strings
         public const String CreateMembershipTitle = "البيانات الاساسية";
