@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using PharmacistsSyndicateReNew.Constants;
 
 namespace PharmacistsSyndicateReNew.Models.ViewModels.SyndicateMembershipManagement.Membership
 {
@@ -12,71 +13,75 @@ namespace PharmacistsSyndicateReNew.Models.ViewModels.SyndicateMembershipManagem
         public Guid AccountId { get; set; }
         public string RegisterNumber { get; set; } = "";
 
-        [Required(ErrorMessage = "يجب تحديد الاسم الاول رجاءا")]
-        [Display(Name = "الاسم الاول")]
+        [Required(ErrorMessage = DkStrings.MembershipManagementVMFNameArabicError)]
+        [Display(Name = DkStrings.MembershipManagementVMFNameArabicDisplay)]
         public string FNameArabic { get; set; } = "";
 
-        [Required(ErrorMessage = "يجب تحديد الاسم الثالث رجاءا")]
-        [Display(Name = "الاسم الثاني")]
+        [Required(ErrorMessage = DkStrings.MembershipManagementVMSNameArabicError)]
+        [Display(Name = DkStrings.MembershipManagementVMSNameArabicDisplay)]
         public string SNameArabic { get; set; } = "";
-        [Required(ErrorMessage = "يجب تحديد الاسم الثالث رجاءا")]
-        [Display(Name = "الاسم الثالث")]
+        [Required(ErrorMessage = DkStrings.MembershipManagementVMThNameArabicError)]
+        [Display(Name = DkStrings.MembershipManagementVMThNameArabicDisplay)]
         public string ThNameArabic { get; set; } = "";
-        [Required(ErrorMessage = "يجب تحديد الاسم الثالث رجاءا")]
-        [Display(Name = "الاسم الثاني")]
+        [Required(ErrorMessage = DkStrings.MembershipManagementVMForthNameArabicError)]
+        [Display(Name = DkStrings.MembershipManagementVMForthNameArabicDisplay)]
         public string ForthNameArabic { get; set; } = "";
 
-        [Display(Name = " اللقب")]
+        [Required(ErrorMessage = DkStrings.MembershipManagementVMSurNameArabicError)]
+        [Display(Name = DkStrings.MembershipManagementVMSurNameArabicDisplay)]
         public string SurNameArabic { get; set; } = "";
 
-        [Required(ErrorMessage = "يجب تحديد اسم الام رجاءا")]
-        [Display(Name = "اسم الام")]
+        [Required(ErrorMessage = DkStrings.MembershipManagementVMMotherNameArabicError)]
+        [Display(Name = DkStrings.MembershipManagementVMMotherNameArabicDisplay)]
         public string MotherNameArabic { get; set; } = "";
 
-        [Required(ErrorMessage = "First Name Required Please ")]
-        [Display(Name = "First Name")]
+        [Required(ErrorMessage = DkStrings.MembershipManagementVMFNameEnglishError)]
+        [Display(Name = DkStrings.MembershipManagementVMFNameEnglishDisplay)]
         public string FNameEnglish { get; set; } = "";
 
-        [Required(ErrorMessage = "Second Name Required Please ")]
-        [Display(Name = "Second Name")]
+        [Required(ErrorMessage = DkStrings.MembershipManagementVMSNameEnglishError)]
+        [Display(Name = DkStrings.MembershipManagementVMSNameEnglishDisplay)]
         public string SNameEnglish { get; set; } = "";
 
-        [Required(ErrorMessage = "Third Name Required Please ")]
-        [Display(Name = "Third Name")]
+        [Required(ErrorMessage = DkStrings.MembershipManagementVMThNameEnglishError)]
+        [Display(Name = DkStrings.MembershipManagementVMThNameEnglishDisplay)]
         public string ThNameEnglish { get; set; } = "";
-
-        [Display(Name = "Surname")]
+        [Required(ErrorMessage = DkStrings.MembershipManagementVMSurNameEnglishError)]
+        [Display(Name = DkStrings.MembershipManagementVMSurNameEnglishDisplay)]
         public string SurNameEnglish { get; set; } = "";
 
-        [Required(ErrorMessage = "Mother Name Required Please ")]
-        [Display(Name = "Mother Name")]
+        [Required(ErrorMessage = DkStrings.MembershipManagementVMMotherNameEnglishError)]
+        [Display(Name = DkStrings.MembershipManagementVMMotherNameEnglishDisplay)]
         public string MotherNameEnglish { get; set; } = "";
 
-        [Required(ErrorMessage = "يجب تحديد رقم الهاتف رجاءا")]
-        [Display(Name = "رقم الهاتف")]
+        [Required(ErrorMessage = DkStrings.PhoneNumberError)]
+        [Display(Name = DkStrings.PhoneNumber)]
         public string PhoneNumber { get; set; } = "";
 
-        [Display(Name = "البريد الاكتروني")]
+        [Required(ErrorMessage = DkStrings.IndexVMEmailError01)]
+        [EmailAddress(ErrorMessage = DkStrings.IndexVMEmailError02)]
+        [DataType(DataType.EmailAddress)]
+        [Display(Name = DkStrings.IndexVMEmailDisplay)]
         public string Email { get; set; } = "";
 
-        [Required(ErrorMessage = "يجب تحديد المحافظة")]
-        [Display(Name = "المحافظة")]
+        [Required(ErrorMessage = DkStrings.MembershipManagementVMGovernorateError)]
+        [Display(Name = DkStrings.MembershipManagementVMGovernorateDisplay)]
         public string Governorate { get; set; } = "";
 
-        [Required(ErrorMessage = "يجب تحديد المدينة")]
-        [Display(Name = "المدينة")]
+        [Required(ErrorMessage = DkStrings.MembershipManagementVMCityError)]
+        [Display(Name = DkStrings.MembershipManagementVMCityDisplay)]
         public string City { get; set; } = "";
 
-        [Required(ErrorMessage = "يجب تحديد رقم المحلة")]
-        [Display(Name = "رقم المحلة")]
+        [Required(ErrorMessage = DkStrings.MembershipManagementVMNeighborhoodError)]
+        [Display(Name = DkStrings.MembershipManagementVMNeighborhoodDisplay)]
         public string Neighborhood { get; set; } = "";
 
-        [Required(ErrorMessage = "يجب تحديد رقم الزقاق")]
-        [Display(Name = "رقم الزقاق")]
+        [Required(ErrorMessage = DkStrings.MembershipManagementVMStreetError)]
+        [Display(Name = DkStrings.MembershipManagementVMStreetDisplay)]
         public string Street { get; set; } = "";
 
-        [Required(ErrorMessage = "يجب تحديد رقم الدار")]
-        [Display(Name = "رقم الدار")]
-        public string Home { get; set; }
+        [Required(ErrorMessage = DkStrings.MembershipManagementVMHomeError)]
+        [Display(Name = DkStrings.MembershipManagementVMHomeDisplay)]
+        public string Home { get; set; } = "";
     }
 }

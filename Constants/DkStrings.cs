@@ -28,6 +28,7 @@ namespace PharmacistsSyndicateReNew.Constants
         public const String UserFullName = "أسم المستخدم الثلاثي";
         public const String JobTitle = "المهنة";
         public const String PhoneNumber = "رقم الهاتف";
+        public const String PhoneNumberError = "يجب تحديد رقم الهاتف رجاءا";
         public const String MemberQuestion = "هل انت عضو سابق في النقابة؟";
         public const String IdNumber = "رقم الهوية النقابية";
         public const String IdPhoneNumber = "رقم الهاتف في استمارة الانتماء";
@@ -57,7 +58,6 @@ namespace PharmacistsSyndicateReNew.Constants
         // IndexVM Error Strings
         public const string IndexVMFullNameError = "يرجى ادخال الاسم الرباعي واللقب";
         public const string IndexVMFullNameDisplay = "الاسم الرباعي واللقب";
-
         public const string IndexVMRegisterNumberError = "يرجى ادخال رقم الستجيل رجاءا";
         public const string IndexVMRegisterNumberDisplay = "رقم التسجيل";
         public const string IndexVMEmailError01 = "يجب كتابة البريد الاكتروني ";
@@ -66,5 +66,38 @@ namespace PharmacistsSyndicateReNew.Constants
         public const string IndexVMEPhoneNumberError = "يجب تحديد رقم الهاتف رجاءا";
         public const string IndexVMPhoneNumberDisplay = "رقم الهاتف المستخدم في استمارة الانتماء";
 
+        // MembershipManagementVM Error Strings
+        public const string MembershipManagementVMFNameArabicError = "يجب تحديد الاسم الاول رجاءا";
+        public const string MembershipManagementVMFNameArabicDisplay = "الاسم الاول";
+        public const string MembershipManagementVMSNameArabicError = "يجب تحديد الاسم الثاني رجاءا";
+        public const string MembershipManagementVMSNameArabicDisplay = "الاسم الثاني";
+        public const string MembershipManagementVMThNameArabicError = "يجب تحديد الاسم الثالث رجاءا";
+        public const string MembershipManagementVMThNameArabicDisplay = "الاسم الثالث";
+        public const string MembershipManagementVMForthNameArabicError = "يجب تحديد الاسم الرابع رجاءا";
+        public const string MembershipManagementVMForthNameArabicDisplay = "الاسم الرابع";
+        public const string MembershipManagementVMSurNameArabicError = "يجب تحديداللقب رجاءا";
+        public const string MembershipManagementVMSurNameArabicDisplay = "اللقب";
+        public const string MembershipManagementVMMotherNameArabicError = "يجب تحديد اسم الام رجاءا";
+        public const string MembershipManagementVMMotherNameArabicDisplay = "اسم الام";
+        public const string MembershipManagementVMFNameEnglishError = "First Name Required Please ";
+        public const string MembershipManagementVMFNameEnglishDisplay = "First Name";
+        public const string MembershipManagementVMSNameEnglishError = "Second Name Required Please ";
+        public const string MembershipManagementVMSNameEnglishDisplay = "Second Name";
+        public const string MembershipManagementVMThNameEnglishError = "Third Name Required Please ";
+        public const string MembershipManagementVMThNameEnglishDisplay = "Third Name";
+        public const string MembershipManagementVMSurNameEnglishError = "Surname Required Please ";
+        public const string MembershipManagementVMSurNameEnglishDisplay = "Surname";
+        public const string MembershipManagementVMMotherNameEnglishError = "Mother Name Required Please ";
+        public const string MembershipManagementVMMotherNameEnglishDisplay = "Mother Name";
+        public const string MembershipManagementVMGovernorateError = "يجب تحديد المحافظة";
+        public const string MembershipManagementVMGovernorateDisplay = "المحافظة";
+        public const string MembershipManagementVMCityError = "يجب تحديد المدينة";
+        public const string MembershipManagementVMCityDisplay = "المدينة";
+        public const string MembershipManagementVMNeighborhoodError = "يجب تحديد رقم المحلة";
+        public const string MembershipManagementVMNeighborhoodDisplay = "رقم المحلة";
+        public const string MembershipManagementVMStreetError = "يجب تحديد رقم الزقاق";
+        public const string MembershipManagementVMStreetDisplay = "رقم الزقاق";
+        public const string MembershipManagementVMHomeError = "يجب تحديد رقم الدار";
+        public const string MembershipManagementVMHomeDisplay = "رقم الدار";
     }
 }
