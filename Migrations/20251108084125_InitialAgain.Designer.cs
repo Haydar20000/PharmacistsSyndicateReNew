@@ -12,8 +12,8 @@ using PharmacistsSyndicateReNew.implementation.EntityConfigurations;
 namespace PharmacistsSyndicateReNew.Migrations
 {
     [DbContext(typeof(SQLDbContext))]
-    [Migration("20251106153557_initial")]
-    partial class initial
+    [Migration("20251108084125_InitialAgain")]
+    partial class InitialAgain
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -242,6 +242,43 @@ namespace PharmacistsSyndicateReNew.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("PharmacistsSyndicateReNew.Models.Domain.Local.MainInformation", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("DateIn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastYearRegistration")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("MembershipId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RegisterNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserFullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MainInformation");
                 });
 
             modelBuilder.Entity("PharmacistsSyndicateReNew.Models.Local.Departments", b =>

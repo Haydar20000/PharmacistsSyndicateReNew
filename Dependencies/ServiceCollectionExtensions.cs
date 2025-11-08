@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.EntityFrameworkCore;
+using PharmacistsSyndicateReNew.Core.Interfaces;
+using PharmacistsSyndicateReNew.Core.Repositories;
+using PharmacistsSyndicateReNew.Core.UnitOfWork;
 using PharmacistsSyndicateReNew.implementation.EntityConfigurations;
 using PharmacistsSyndicateReNew.implementation.Helper;
 using PharmacistsSyndicateReNew.Models;
@@ -48,13 +51,13 @@ namespace PharmacistsSyndicateReNew.Dependencies
             // services.AddDbContext<AliHayderDbContext>(options =>
             //     options.UseSqlServer(connectionString));
 
-            // 🧩 Repositories & Services
-            // services
-            //     .AddScoped<IUnitOfWork, UnitOfWork>()
-            //     .AddScoped<IAuthRepository, AuthRepository>()
-            //     .AddScoped<IExternalLoginRepository, ExternalLoginRepository>()
-            //     .AddScoped<IEmailServicesRepository, EmailServicesRepository>()
-            //     .AddScoped<IJwtRepository, JwtRepository>();
+            //🧩 Repositories & Services
+            services
+                .AddScoped<IUnitOfWork, UnitOfWork>()
+                .AddScoped<IMainInformation, MainInformationRepository>();
+            // .AddScoped<IExternalLoginRepository, ExternalLoginRepository>()
+            // .AddScoped<IEmailServicesRepository, EmailServicesRepository>()
+            // .AddScoped<IJwtRepository, JwtRepository>();
 
             return services;
         }

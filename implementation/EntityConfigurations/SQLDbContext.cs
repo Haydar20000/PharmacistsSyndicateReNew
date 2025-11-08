@@ -16,7 +16,7 @@ namespace PharmacistsSyndicateReNew.implementation.EntityConfigurations
         public SQLDbContext(DbContextOptions<SQLDbContext> options)
                   : base(options)
         {
-            this.Database.EnsureCreated();
+
         }
 
         public DbSet<Departments> Departments { get; set; }

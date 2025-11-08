@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PharmacistsSyndicateReNew")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83147de31d00d86ffc590306085360d818893ce8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e3d5f895691265246566d9df8b6bf6fe7cc692a")]
 [assembly: System.Reflection.AssemblyProductAttribute("PharmacistsSyndicateReNew")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PharmacistsSyndicateReNew")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

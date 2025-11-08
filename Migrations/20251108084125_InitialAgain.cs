@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PharmacistsSyndicateReNew.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class InitialAgain : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -69,6 +69,24 @@ namespace PharmacistsSyndicateReNew.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Departments", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MainInformation",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    MembershipId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    UserFullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RegisterNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LastYearRegistration = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DateIn = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MainInformation", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -237,6 +255,9 @@ namespace PharmacistsSyndicateReNew.Migrations
 
             migrationBuilder.DropTable(
                 name: "Departments");
+
+            migrationBuilder.DropTable(
+                name: "MainInformation");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

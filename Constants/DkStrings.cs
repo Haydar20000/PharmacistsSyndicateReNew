@@ -45,7 +45,7 @@ namespace PharmacistsSyndicateReNew.Constants
         public const String IndexWelcome = "مرحبا بكم في نقابة الصيادلة العراقيين";
         public const String IndexMainComment01 = "للدخول الى استمارة التجديد";
         public const String IndexMainComment02 = "يرجى ادخال البيانات التالية رجاءا";
-
+        public const String IndexError01 = "البيانات التي ادخلتها غير متطابقة مع البيانات في استمارة الانتماء ";
         // Create Membership Page strings
         public const String CreateMembershipTitle = "البيانات الاساسية";
         public const String CreateMembershipNameInArabic = " الاسم باللغة العربية";
@@ -53,6 +53,18 @@ namespace PharmacistsSyndicateReNew.Constants
         public const String CreateMembershipNameInEnglishNote = "يرجى كتابة البيانات كما مذكورة في جواز السفر";
         public const String CreateMembershipContactDetails = "بيانات الاتصال";
         public const string CreateMembershipAddress = "العنوان";
+
+        // IndexVM Error Strings
+        public const string IndexVMFullNameError = "يرجى ادخال الاسم الرباعي واللقب";
+        public const string IndexVMFullNameDisplay = "الاسم الرباعي واللقب";
+
+        public const string IndexVMRegisterNumberError = "يرجى ادخال رقم الستجيل رجاءا";
+        public const string IndexVMRegisterNumberDisplay = "رقم التسجيل";
+        public const string IndexVMEmailError01 = "يجب كتابة البريد الاكتروني ";
+        public const string IndexVMEmailError02 = "يجب كتابة البريد الاكتروني بالطريقة الصحيحة";
+        public const string IndexVMEmailDisplay = " البريد الاكتروني";
+        public const string IndexVMEPhoneNumberError = "يجب تحديد رقم الهاتف رجاءا";
+        public const string IndexVMPhoneNumberDisplay = "رقم الهاتف المستخدم في استمارة الانتماء";
 
     }
 }

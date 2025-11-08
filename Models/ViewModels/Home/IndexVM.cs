@@ -1,9 +1,7 @@
 // This Code Belong For Diamond Key Software solutions
-using System;
-using System.Collections.Generic;
+
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+using PharmacistsSyndicateReNew.Constants;
 
 namespace PharmacistsSyndicateReNew.Models.ViewModels.Home
 {
@@ -13,21 +11,22 @@ namespace PharmacistsSyndicateReNew.Models.ViewModels.Home
         public Guid MembershipId { get; set; }
         public Guid AccountId { get; set; }
 
-        [Required(ErrorMessage = "يرجى ادخال الاسم الرباعي واللقب")]
-        [Display(Name = "الاسم الرباعي واللقب")]
+        [Required(ErrorMessage = DkStrings.IndexVMFullNameError)]
+        [Display(Name = DkStrings.IndexVMFullNameDisplay)]
         public required string FullName { get; set; }
 
-        [Required(ErrorMessage = "يرجى ادخال رقم الستجيل رجاءا")]
-        [Display(Name = "رقم التسجيل")]
+        [Required(ErrorMessage = DkStrings.IndexVMRegisterNumberError)]
+        [Display(Name = DkStrings.IndexVMRegisterNumberDisplay)]
         public required string RegisterNumber { get; set; }
 
-        [Required(ErrorMessage = "يرجى ادخال البريد الالكتروني")]
-        [EmailAddress]
-        [Display(Name = "البريد الالكتروني المستخدم في استمارة الانتماء")]
+        [Required(ErrorMessage = DkStrings.IndexVMEmailError01)]
+        [EmailAddress(ErrorMessage = DkStrings.IndexVMEmailError02)]
+        [DataType(DataType.EmailAddress)]
+        [Display(Name = DkStrings.IndexVMEmailDisplay)]
         public required string Email { get; set; } = "";
 
-        [Required(ErrorMessage = "يجب تحديد رقم الهاتف رجاءا")]
-        [Display(Name = "رقم الهاتف المستخدم في استمارة الانتماء")]
+        [Required(ErrorMessage = DkStrings.IndexVMEPhoneNumberError)]
+        [Display(Name = DkStrings.IndexVMPhoneNumberDisplay)]
         public string PhoneNumber { get; set; } = "";
     }
 }

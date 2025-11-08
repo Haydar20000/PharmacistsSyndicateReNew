@@ -10,6 +10,7 @@
     <h2 class="main-Title">@DkStrings.IndexMainComment01</h2>
     <h2 class="main-Title">@DkStrings.IndexMainComment02</h2>
     <form method="post" enctype="multipart/form-data">
+        <div asp-validation-summary="All" class="validation-summary"></div>
         <div class="form-group-big">
             <label class="input-field-label-main" asp-for="FullName"></label>
             <input class="input-field-input-main" asp-for="FullName" />
@@ -28,11 +29,11 @@
         </div>
 
         <div class="form-center" style="margin-top : 20px;">
-            <button class="btn-style01" style="width:100px" type="submit">@DkStrings.CreateMembershipTitle</button>
-            <a class="btn-style01" style="width:72px;padding:14px;text-align:center"
-                href="~/SyndicateManagement/Create/@Model.MembershipId">@DkStrings.Back</a>
+            <button class="btn-style01" style="width:150px;padding:14px;text-align:center; margin-top: 30px;"
+                type="submit">@DkStrings.CreateMembershipTitle</button>
+            @* <a class="btn-style01" style="width:72px;padding:14px;text-align:center"
+                href="~/SyndicateManagement/Create/@Model.MembershipId">@DkStrings.Back</a> *@
         </div>
-
     </form>
     @* <a class="btn-style01" style="width:150px;padding:14px;text-align:center; margin-top: 30px;"
         href="~/SyndicateManagement/Create">@DkStrings.CreateMembershipTitle</a> *@

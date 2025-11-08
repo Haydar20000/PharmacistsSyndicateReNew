@@ -7,7 +7,7 @@
     <h1 class="main-Title">@DkStrings.CreateMembershipTitle</h1>
     <form method="post" enctype="multipart/form-data">
         <div asp-validation-summary="All" class="validation-summary"></div>
-        <input type="hidden" asp-for="MembershipId" />
+        <input type="hidden" asp-for="RegisterNumber" />
         <h3>@DkStrings.CreateMembershipNameInArabic</h3>
         <div class="input-section">
             <div class="input-field">
@@ -89,7 +89,7 @@
                 <input class="input-field-input" asp-for="Home" />
             </div>
         </div>
-        <div class="input-section">
+        @* <div class="input-section">
             <div class="input-field">
                 <div class="form-group">
                     <label class=".checkbox-label" asp-for="IsEmployee"></label>
@@ -101,11 +101,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> *@
         <div class="form-center" style="margin-top : 20px;">
             <button class="btn-style01" style="width:100px" type="submit">@DkStrings.Save</button>
             <a class="btn-style01" style="width:72px;padding:14px;text-align:center"
-                href="~/SyndicateManagement/Intro/@Model.MembershipId">@DkStrings.Back</a>
+                href="~/SyndicateManagement/Intro/@Model.RegisterNumber">@DkStrings.Back</a>
         </div>
     </form>
 </div>
