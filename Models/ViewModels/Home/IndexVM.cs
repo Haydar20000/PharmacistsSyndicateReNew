@@ -28,5 +28,15 @@ namespace PharmacistsSyndicateReNew.Models.ViewModels.Home
         [Required(ErrorMessage = DkStrings.IndexVMEPhoneNumberError)]
         [Display(Name = DkStrings.IndexVMPhoneNumberDisplay)]
         public string PhoneNumber { get; set; } = "";
+
+        [Required(ErrorMessage = DkStrings.IndexVMUniversityError)]
+        [Display(Name = DkStrings.IndexVMUniversityDisplay)]
+        public string University { get; set; } = "";
+        [Required(ErrorMessage = DkStrings.IndexVMGraduationYearError)]
+        [Display(Name = DkStrings.IndexVMGraduationYearDisplay)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime GraduationYear { get; set; } = DateTime.Now;
+
+
     }
 }

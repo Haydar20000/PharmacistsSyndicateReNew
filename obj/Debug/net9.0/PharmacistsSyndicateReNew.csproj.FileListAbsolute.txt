@@ -167,10 +167,8 @@ D:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug
 D:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug\net9.0\scopedcss\bundle\PharmacistsSyndicateReNew.styles.css
 D:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug\net9.0\scopedcss\projectbundle\PharmacistsSyndicateReNew.bundle.scp.css
 D:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug\net9.0\compressed\4zmca4qcwl-b9sayid5wm.gz
-D:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug\net9.0\compressed\1bsm4hhkyy-ia3mzjdujp.gz
 D:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug\net9.0\compressed\6f15rxn45s-61n19gt1b8.gz
 D:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug\net9.0\compressed\1m4g6ghnwr-3v1k1ahv57.gz
-D:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug\net9.0\compressed\4zgvjy8d2n-xtxxf3hu2r.gz
 D:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug\net9.0\compressed\c4k5blsvhd-bqjiyaj88i.gz
 D:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug\net9.0\compressed\itw0rraw6o-c2jlpeoesf.gz
 D:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug\net9.0\compressed\l8u8eedt6j-erw9l3u2r3.gz
@@ -242,3 +240,5 @@ D:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug
 D:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug\net9.0\PharmacistsSyndicateReNew.pdb
 D:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug\net9.0\PharmacistsSyndicateReNew.genruntimeconfig.cache
 D:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug\net9.0\ref\PharmacistsSyndicateReNew.dll
+d:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug\net9.0\compressed\1bsm4hhkyy-k0e6ut0ut4.gz
+d:\Syndicate of Iraqi Pharmacists\asp.netMvc\PharmacistsSyndicateReNew\obj\Debug\net9.0\compressed\4zgvjy8d2n-nf2ub31m32.gz

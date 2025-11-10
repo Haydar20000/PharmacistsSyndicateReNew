@@ -138,7 +138,18 @@
      display: grid;
      grid-template-columns: 380px 400px 200px;
      margin: auto;
+     overflow: visible;
  }
+
+ /* For Date Picker  */
+ .datepicker {
+     z-index: 99999 !important;
+     position: absolute !important;
+     background-color: var(--primary) !important;
+
+ }
+
+ .date-input-field {}
 
  .wrapper {
      display: grid;
