@@ -3,9 +3,10 @@
 @inject UserManager<ApplicationUser> userManager; *@
 @model IndexVM
 @{
+    // CRUCIAL FIX: Explicitly setting the Layout prevents the view engine from ignoring the _ViewStart setting
+    Layout = "_Layout";
     ViewData["Title"] = DkStrings.IndexTitle;
 }
-
 <div class="input-main">
     <h2 class="main-Title">@DkStrings.IndexMainComment01</h2>
     <h2 class="main-Title">@DkStrings.IndexMainComment02</h2>
@@ -41,7 +42,6 @@
                     <option value="@item.Value"></option>
                 }
             </datalist>
-            <span asp-validation-for="University" class="text-danger"></span>
         </div>
         <div class="form-group-big">
             <label class="input-field-label-main" asp-for="GraduationYear"></label>

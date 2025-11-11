@@ -6,6 +6,7 @@ using PharmacistsSyndicateReNew.Constants;
 using PharmacistsSyndicateReNew.Core.UnitOfWork;
 using PharmacistsSyndicateReNew.implementation.Helper;
 using PharmacistsSyndicateReNew.Models;
+using PharmacistsSyndicateReNew.Models.Domain.Local;
 using PharmacistsSyndicateReNew.Models.ViewModels.Home;
 using PharmacistsSyndicateReNew.Models.ViewModels.SyndicateMembershipManagement.Membership;
 
@@ -39,7 +40,7 @@ public class HomeController : Controller
 
             if (ModelState.IsValid)
             {
-                /// Add MainInformation to database 
+                // Add MainInformation to database
                 // var mainInformation = new MainInformation();
                 // mainInformation.RegisterNumber = model.RegisterNumber;
                 // mainInformation.UserFullName = model.FullName;
@@ -51,9 +52,15 @@ public class HomeController : Controller
                 // _unitOfWork.MainInformation.Add(mainInformation);
                 // _unitOfWork.Complete();
                 int accepted = 0;
-                var user = _unitOfWork.MainInformation.SingleOrDefault(e => e.RegisterNumber == model.RegisterNumber);
-                if (user != null)
+                var users = _unitOfWork.MainInformation.Find(e => e.RegisterNumber == model.RegisterNumber);
+                if (users.Skip(1).Any() || !users.Any())
                 {
+                    ModelState.AddModelError(DkStrings.IndexError02, DkStrings.IndexError02);
+                    return View(model);
+                }
+                else
+                {
+                    var user = users.FirstOrDefault();
                     var isNameExist = HelperFunction.MatchingStrings(user.UserFullName, model.FullName);
                     var isEmailExist = user.Email.Trim() == model.Email.Trim();
                     var isPhoneNumberExist = user.PhoneNumber.Trim() == model.PhoneNumber.Trim();

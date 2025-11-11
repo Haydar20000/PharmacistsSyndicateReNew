@@ -47,6 +47,7 @@ namespace PharmacistsSyndicateReNew.Constants
         public const String IndexMainComment01 = "للدخول الى استمارة التجديد";
         public const String IndexMainComment02 = "يرجى ادخال البيانات التالية رجاءا";
         public const String IndexError01 = "البيانات التي ادخلتها غير متطابقة مع البيانات في استمارة الانتماء ";
+        public const String IndexError02 = "تعذر اكتمال عملية التجديد حاليا , يرجى ارسال راسله نصية على واتساب لهذا الرقم 07800016292 يذكر فيها الاسم الرباعي واللقب مع رقم التسجيل رجاءا ";
         // Create Membership Page strings
         public const String CreateMembershipTitle = "البيانات الاساسية";
         public const String CreateMembershipNameInArabic = " الاسم باللغة العربية";
