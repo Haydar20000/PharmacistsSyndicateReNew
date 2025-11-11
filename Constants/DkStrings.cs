@@ -62,11 +62,12 @@ namespace PharmacistsSyndicateReNew.Constants
         public const string IndexVMRegisterNumberDisplay = "رقم التسجيل";
         public const string IndexVMEmailError01 = "يجب كتابة البريد الاكتروني ";
         public const string IndexVMEmailError02 = "يجب كتابة البريد الاكتروني بالطريقة الصحيحة";
-        public const string IndexVMEmailDisplay = " البريد الاكتروني";
+        public const string IndexVMEmailDisplay = " البريد الاكتروني المستخدم في استمارة الانتماء";
         public const string IndexVMEPhoneNumberError = "يجب تحديد رقم الهاتف رجاءا";
         public const string IndexVMPhoneNumberDisplay = "رقم الهاتف المستخدم في استمارة الانتماء";
         public const string IndexVMUniversityError = "يرجى ذكر اسم الجامعة التي تخرجت منها رجاءا.. ";
         public const string IndexVMUniversityDisplay = " الجامعة";
+        public const string IndexVMUniversityDisplay01 = "--- حدد الجامعة رجاءا ---";
         public const string IndexVMGraduationYearError = "يرجة تحديد تاريخ التخرج رجاءا";
         public const string IndexVMGraduationYearDisplay = "تاريخ التخرج";
 

@@ -169,17 +169,36 @@
 
  .input-field-input-main {
      margin-left: auto;
-     background: var(--primary);
+     background-color: var(--primary);
      font-family: Cairo;
-     padding: 0.6rem;
+     padding: 0rem 0.6rem;
      color: var(--dark);
      font-size: 1.1rem;
      font-weight: bold;
      direction: rtl;
-     height: 20px;
+     min-height: 20px;
      border: 1px solid var(--primary);
      margin-top: 10px;
      margin-left: 10px;
+ }
+
+ .input-field-dropdown {
+
+     margin-left: auto;
+     background-color: var(--primary);
+     font-family: Cairo;
+     padding: 0rem 0.6rem;
+     color: var(--dark);
+     font-size: 1.1rem;
+     font-weight: bold;
+     direction: rtl;
+     min-height: 20px;
+     border: 1px solid var(--primary);
+     margin-top: 10px;
+     margin-left: 10px;
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
  }
 
  /* Index Page Style ------------------------------ End */

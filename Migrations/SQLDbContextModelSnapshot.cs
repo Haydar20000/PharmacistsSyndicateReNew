@@ -269,13 +269,17 @@ namespace PharmacistsSyndicateReNew.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("University")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("UserFullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("MainInformation", (string)null);
+                    b.ToTable("MainInformation");
                 });
 
             modelBuilder.Entity("PharmacistsSyndicateReNew.Models.Local.Departments", b =>
@@ -299,7 +303,7 @@ namespace PharmacistsSyndicateReNew.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Departments", (string)null);
+                    b.ToTable("Departments");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

@@ -14,6 +14,7 @@ namespace PharmacistsSyndicateReNew.Models.Domain.Local
         public string RegisterNumber { get; set; } = "";
         public string Email { get; set; } = "";
         public string PhoneNumber { get; set; } = "";
+        public string University { get; set; } = "";
         public string LastYearRegistration { get; set; } = "";
         public DateTime DateIn { get; set; } = DateTime.Now;
     }

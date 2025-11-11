@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace PharmacistsSyndicateReNew.implementation.Helper
@@ -86,17 +87,17 @@ namespace PharmacistsSyndicateReNew.implementation.Helper
             string normalizedS2 = NormalizeArabicNameForMatch(s2);
             return normalizedS1 == normalizedS2;
         }
-
+        /// <summary>
+        /// Processes a full Arabic name by cleaning titles, normalizing characters (الهمزه, التاء المربوطة),
+        /// fixing common spacing errors (e.g., "عبد الكريم" to "عبدالكريم"), and splitting into parts.        
         public static string[] ProcessAndSplitArabicName(string fullName)
         {
-            // --- 1. CLEANING (Remove Titles) ---
-
+            // --- 1. INITIAL CLEANING (Remove Titles) ---
             string cleanedName = fullName.Trim();
             string[] commonTitles = { "الأستاذ", "د.", "د", "دكتور", "مهندس", "الشيخ", "الصيدلي" };
 
             foreach (string title in commonTitles)
             {
-                // Use OrdinalIgnoreCase for case-insensitive checking (even though Arabic is often handled differently, this is good practice)
                 if (cleanedName.StartsWith(title + " ", StringComparison.OrdinalIgnoreCase))
                 {
                     cleanedName = cleanedName.Substring(title.Length + 1).Trim();
@@ -104,12 +105,22 @@ namespace PharmacistsSyndicateReNew.implementation.Helper
                 }
             }
 
-            // --- 2. NORMALIZATION (Handle Hamza Variations) ---
-
+            // Check if name is empty after cleaning titles
             if (string.IsNullOrEmpty(cleanedName))
             {
-                return new string[0]; // Return empty array if name is empty after cleaning
+                return new string[0];
             }
+
+            // --- 2. FIX SPACING ERROR (The new logic for "عبد الكريم" -> "عبدالكريم") ---
+
+            cleanedName = Regex.Replace(cleanedName, @"\s*عبد\s+ال", " عبدال");
+
+            // After the fix above, the name might still start with a space if "عبد" was at the start, 
+            // so we trim again to ensure a clean start.
+            cleanedName = cleanedName.Trim();
+
+
+            // --- 3. NORMALIZATION (Handle Hamza Variations and Diacritics) ---
 
             string normalizedName = cleanedName
                 // Normalize various Alif forms (أ, إ, آ) to plain Alif (ا)
@@ -120,17 +131,63 @@ namespace PharmacistsSyndicateReNew.implementation.Helper
                 .Replace('ة', 'ه');
 
             // Remove remaining diacritics (Harakat)
-            normalizedName = System.Text.RegularExpressions.Regex.Replace(
+            normalizedName = Regex.Replace(
                 normalizedName,
-                @"[\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06E8\u06EA-\u06ED]",
+                @"[\\u064B-\\u065F\\u0670\\u06D6-\\u06DC\\u06DF-\\u06E8\\u06EA-\\u06ED]",
                 string.Empty
             );
 
-            // --- 3. SPLITTING (Separate Parts) ---
+            // --- 4. SPLITTING (Separate Parts) ---
 
+            // Split by space, removing any resulting empty entries
             string[] nameParts = normalizedName.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
             return nameParts;
         }
+        // public static string[] ProcessAndSplitArabicName(string fullName)
+        // {
+        //     // --- 1. CLEANING (Remove Titles) ---
+
+        //     string cleanedName = fullName.Trim();
+        //     string[] commonTitles = { "الأستاذ", "د.", "د", "دكتور", "مهندس", "الشيخ", "الصيدلي" };
+
+        //     foreach (string title in commonTitles)
+        //     {
+        //         // Use OrdinalIgnoreCase for case-insensitive checking (even though Arabic is often handled differently, this is good practice)
+        //         if (cleanedName.StartsWith(title + " ", StringComparison.OrdinalIgnoreCase))
+        //         {
+        //             cleanedName = cleanedName.Substring(title.Length + 1).Trim();
+        //             break;
+        //         }
+        //     }
+
+        //     // --- 2. NORMALIZATION (Handle Hamza Variations) ---
+
+        //     if (string.IsNullOrEmpty(cleanedName))
+        //     {
+        //         return new string[0]; // Return empty array if name is empty after cleaning
+        //     }
+
+        //     string normalizedName = cleanedName
+        //         // Normalize various Alif forms (أ, إ, آ) to plain Alif (ا)
+        //         .Replace('أ', 'ا')
+        //         .Replace('إ', 'ا')
+        //         .Replace('آ', 'ا')
+        //         // Normalize Taa Marbutah (ة) to Haa (ه)
+        //         .Replace('ة', 'ه');
+
+        //     // Remove remaining diacritics (Harakat)
+        //     normalizedName = System.Text.RegularExpressions.Regex.Replace(
+        //         normalizedName,
+        //         @"[\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06E8\u06EA-\u06ED]",
+        //         string.Empty
+        //     );
+
+        //     // --- 3. SPLITTING (Separate Parts) ---
+
+        //     string[] nameParts = normalizedName.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+        //     return nameParts;
+        // }
     }
 }

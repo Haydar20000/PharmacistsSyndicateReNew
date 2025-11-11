@@ -12,8 +12,8 @@ using PharmacistsSyndicateReNew.implementation.EntityConfigurations;
 namespace PharmacistsSyndicateReNew.Migrations
 {
     [DbContext(typeof(SQLDbContext))]
-    [Migration("20251108084125_InitialAgain")]
-    partial class InitialAgain
+    [Migration("20251110084425_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -269,6 +269,10 @@ namespace PharmacistsSyndicateReNew.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("RegisterNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("University")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

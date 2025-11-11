@@ -13,32 +13,35 @@
         <div asp-validation-summary="All" class="validation-summary"></div>
         <div class="form-group-big">
             <label class="input-field-label-main" asp-for="FullName"></label>
-            <input class="input-field-input-main" asp-for="FullName" value="حيدر عبدالمهدي احريز مداعي السماوي" />
+            <input class="input-field-input-main" asp-for="FullName" lang="ar" dir="rtl"
+                value="حيدر عبدالمهدي احريز مداعي السماوي" />
         </div>
         <div class="form-group-big">
             <label class="input-field-label-main" asp-for="RegisterNumber"></label>
-            <input class="input-field-input-main" asp-for="RegisterNumber" value="2266GS6" />
+            <input class="input-field-input-main" asp-for="RegisterNumber" lang="en" dir="ltr" value="2266GS6" />
         </div>
+
         <div class="form-group-big">
             <label class="input-field-label-main" asp-for="Email"></label>
-            <input class="input-field-input-main" asp-for="Email" value="hay19732000@gmail.com" />
+            <input class="input-field-input-main" asp-for="Email" lang="en" dir="ltr" value="hay19732000@gmail.com" />
         </div>
+
         <div class="form-group-big">
             <label class="input-field-label-main" asp-for="PhoneNumber"></label>
-            <input class="input-field-input-main" asp-for="PhoneNumber" value="07892765234" />
+            <input class="input-field-input-main" asp-for="PhoneNumber" lang="en" dir="ltr" value="07892765234" />
         </div>
-        @* <div class="form-group">
-            <label class="Mytabel-Inputlabel" asp-for="CategoryId"></label>
-            <select class="Mydropdown" asp-for="CategoryId">
-                @foreach (var item in Model.Categories)
-                {
-                    <option value="@item.Id">@item.Title</option>
-                }
-            </select>
-        </div> *@
+
         <div class="form-group-big">
             <label class="input-field-label-main" asp-for="University"></label>
-            <input class="input-field-input-main" asp-for="University" value="07892765234" />
+            <input type="text" class="input-field-dropdown" asp-for="University" lang="ar" dir="rtl"
+                list="universityOptions" placeholder=@DkStrings.IndexVMUniversityDisplay01 />
+            <datalist id="universityOptions">
+                @foreach (var item in Model.Universities)
+                {
+                    <option value="@item.Value"></option>
+                }
+            </datalist>
+            <span asp-validation-for="University" class="text-danger"></span>
         </div>
         <div class="form-group-big">
             <label class="input-field-label-main" asp-for="GraduationYear"></label>

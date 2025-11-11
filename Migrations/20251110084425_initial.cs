@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PharmacistsSyndicateReNew.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialAgain : Migration
+    public partial class initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -81,6 +81,7 @@ namespace PharmacistsSyndicateReNew.Migrations
                     RegisterNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    University = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastYearRegistration = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DateIn = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
